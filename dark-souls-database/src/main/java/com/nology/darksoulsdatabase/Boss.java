@@ -3,12 +3,11 @@ package com.nology.darksoulsdatabase;
 import javax.persistence.*;
 
 @Entity
-
 public class Boss {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     private String bossName;
     private int bossHealth;
@@ -20,7 +19,7 @@ public class Boss {
 
     }
 
-    public Boss(int id, String bossName, int bossHealth, int bossSouls, String bossImage, String bossDesc) {
+    public Boss(long id, String bossName, int bossHealth, int bossSouls, String bossImage, String bossDesc) {
         this.id = id;
         this.bossName = bossName;
         this.bossHealth = bossHealth;
@@ -29,11 +28,11 @@ public class Boss {
         this.bossDesc = bossDesc;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

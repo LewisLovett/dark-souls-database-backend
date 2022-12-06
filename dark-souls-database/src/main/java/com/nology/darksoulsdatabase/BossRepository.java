@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BossRepository extends JpaRepository<Boss,Long> {
-
+    void deleteBossById(long id);
 }
