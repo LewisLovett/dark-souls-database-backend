@@ -27,5 +27,10 @@ public class BossController {
        }
         return ResponseEntity.status(HttpStatus.OK).body(bossService.getAllBosses(limit));
     }
+
+    @GetMapping("/boss/{id}")
+    public ResponseEntity<Boss> getBossById(@PathVariable long id){
+        return ResponseEntity.status(HttpStatus.OK).body(bossService.getBossById(id));
+    }
 }
 
