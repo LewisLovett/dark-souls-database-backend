@@ -32,6 +32,11 @@ public class BossService {
         return bossRepository.findAll().stream().limit(limit).collect(Collectors.toList());
     }
 
+    public List<Boss> getBossesByGameAppearance(int gameAppearance, int limit) {
+        List<Boss> bosses = bossRepository.getAllByGameAppearance(gameAppearance);
+        return bosses.stream().limit(limit).collect(Collectors.toList());
+    }
+
     public void updateBoss(Boss newBoss, long id){
         if(!bossRepository.existsById(id)){
             //EXEPTION"""""
