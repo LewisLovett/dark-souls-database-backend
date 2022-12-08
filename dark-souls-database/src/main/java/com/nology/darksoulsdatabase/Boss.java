@@ -13,6 +13,8 @@ public class Boss {
     private int bossHealth;
     private int bossSouls;
     private String bossImage;
+
+    private String bossMusic;
     private String bossDesc;
 
     private int gameAppearance;
@@ -21,12 +23,14 @@ public class Boss {
 
     }
 
-    public Boss(long id, String bossName, int bossHealth, int bossSouls, String bossImage, String bossDesc, int gameAppearance) {
+
+    public Boss(long id, String bossName, int bossHealth, int bossSouls, String bossImage, String bossMusic, String bossDesc, int gameAppearance) {
         this.id = id;
         this.bossName = bossName;
         this.bossHealth = bossHealth;
         this.bossSouls = bossSouls;
         this.bossImage = bossImage;
+        this.bossMusic = bossMusic;
         this.bossDesc = bossDesc;
         this.gameAppearance = gameAppearance;
     }
@@ -71,6 +75,15 @@ public class Boss {
     public void setBossImage(String bossImage) {
         this.bossImage = bossImage;
     }
+
+    public String getBossMusic() {
+        return bossMusic;
+    }
+
+    public void setBossMusic(String bossMusic) {
+        this.bossMusic = bossMusic;
+    }
+
 
     public String getBossDesc() {
         return bossDesc;
